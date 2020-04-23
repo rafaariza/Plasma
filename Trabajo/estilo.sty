@@ -76,6 +76,20 @@ keepaspectratio]{img/fondo_portada.png}%
 \newcommand{\muA}{\mu\text{A}}
 \newcommand{\nA}{\text{nA}}
 
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
 % chapters formatx
 \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
 \makeatletter
