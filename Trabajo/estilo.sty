@@ -1,6 +1,7 @@
 \usepackage[latin1,utf8]{inputenc}
 \usepackage[english,spanish,es-tabla]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{slantsc}
 
 % AMS Packages
 \usepackage{amsmath,amssymb,amsfonts}
@@ -26,13 +27,13 @@
 \pagestyle{fancy} 
 \fancyhf{}
 \fancyhead[R]{\textit{\thechapter}}
-\fancyhead[L]{\textit{\thepage}}
+\fancyhead[L]{\textit{\scshape{\thepage}}}
 \fancyfoot[R,L,C]{}
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}
 \fancypagestyle{plain}{%
 \fancyhf{} % clear all header and footer fields
-\fancyfoot[R]{\textit{\thepage}} % except the center
+\fancyfoot[R]{\textit{\scshape{\thepage}}} % except the center
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0pt}}
 
