@@ -2,6 +2,8 @@
 \usepackage[english,spanish,es-tabla]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{slantsc}
+%\usepackage{helvet}  %FUENTE ARIAL
+%\renewcommand{\familydefault}{\sfdefault}
 
 % AMS Packages
 \usepackage{amsmath,amssymb,amsfonts}
@@ -15,7 +17,7 @@
 % Page settings
 \usepackage[top=3cm, bottom=2.5cm, left=2.5cm, right=2cm]{geometry}
 \usepackage{setspace}
-\linespread{1.5}
+\linespread{1.3}
 \setlength{\parindent}{1cm}
 \usepackage{makeidx}
 \newcommand*\emptyPage{\newpage\null\thispagestyle{empty}\newpage}
@@ -23,10 +25,11 @@
 \decimalpoint   
 
 % Para las cabeceras y pies (luego se redefine cuando haga falta)
-\usepackage{fancyhdr}   % Para las cabeceras
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}   % Para las cabeceras
 \pagestyle{fancy} 
 \fancyhf{}
-\fancyhead[R]{\textit{\thechapter}}
+\fancyhead[R]{\textit{\nouppercase{\leftmark}}}
 \fancyhead[L]{\textit{\scshape{\thepage}}}
 \fancyfoot[R,L,C]{}
 \renewcommand{\headrulewidth}{0.5pt}
@@ -60,7 +63,7 @@ keepaspectratio]{img/fondo_portada.png}%
 \usepackage{longtable}
 
 % Hyperref
-\usepackage{hyperref}
+\usepackage[pdfa]{hyperref}
 \hypersetup{
 	colorlinks=true, %set true if you want colored links
 	linktoc=all,     %set to all if you want both sections and subsections linked
