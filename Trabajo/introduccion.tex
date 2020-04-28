@@ -27,7 +27,7 @@ Segundo, las reacciones de fusión nuclear no emiten gases de efecto invernadero
 Tercero, la fusión nuclear es intrínsecamente segura. El combustible de fusión se introduce continuamente en el reactor a una velocidad que sostiene la reacción durante sólo unas pocas decenas
 de segundos en cada instante. La reacción de fusión sólo puede ocurrir bajo una temperatura muy alta
 y un campo de confinamiento suficientemente preciso y sin reacción en cadena. Cualquier manipulación incorrecta detendrá la reacción.\par
-\section{Fusión nuclear}
+\section{Fusión nuclear}\label{sec:fusion}
 Los protones y neutrones en el núcleo se mantienen unidos por la fuerza nuclear de corto alcance. La energía
 requerida para desmontar un núcleo se llama energía de enlace. La figura~\ref{fig:nucleons} muestra que el promedio
 de la energía de enlace varía entre elementos; tanto los núcleos más ligeros como los más pesados tienen un promedio bajo
@@ -54,7 +54,7 @@ las partículas aceleradas no daban en el objetivo.\par
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{img/fusion.png}
-    \caption[Secciones eficaces en reacciones de fusión]{Secciones eficaces para las reacciones de fusión D-T, D-$^3$He y D-D en función de la energía cinética del deuterón K$_D$~\cite{Freidberg:1186225}.}
+    \caption[Secciones eficaces en reacciones de fusión]{Secciones eficaces para las reacciones de fusión D-T, D-$^3$He y D-D en función de la energía cinética del deuterón $K_D$~\cite{Freidberg:1186225}.}
     \label{fig:fusion}
 \end{figure}
 Hoy en día se acepta generalmente que la forma más factible para la producción efectiva de energía 
@@ -80,3 +80,78 @@ Este triple producto sugiere que para generar energía de forma efectiva a parti
 necesita estar confinado a muy alta temperatura por un tiempo suficientemente largo con alta densidad.
 Hay principalmente dos formas de conseguir energía de fusión controlada: el confinamiento magnético 
 y el confinamiento inercial. Este trabajo se centra en la primera de ellas.\par
+\section{Confinamiento magnético}\label{sec:confinement}
+El confinamiento magnético de plasmas de alta densidad y temperatura es estudiado
+desde hace varias décadas con la finalidad de construir un reactor de fusión que sea capaz
+de producir energía. Para ello, es necesario conseguir la ignición del plasma. Esta se alcanza
+cuando se cumple el criterio de Lawson~\eqref{eq:lawson}.
+El tiempo de confinamiento de las primeras máquinas era de unos pocos milisegundos, dado
+que el campo magnético confinante únicamente tenía componente toroidal. Se consiguieron
+plasmas con un tiempo de confinamiento treinta veces superior cuando los campos magnéticos
+tenían cierta helicidad. Para definir esta propiedad en stellarators, se utiliza la transformada
+rotacional que es el número de giros poloidales por cada giro toroidal. Normalmente este
+valor varía a lo largo del radio, por ello se habla de perfil de la transformada rotacional. En
+algunos puntos radiales el valor de la transformada rotacional puede ser racional, dando lugar
+a superficies magnéticas resonantes. Esto sumado al hecho de que el plasma es un medio con
+cierta resistividad, puede dar lugar al nacimiento de islas magnéticas que son superficies de
+flujo que se forman dentro de la columna de plasma aisladas del resto de superficies magnéticas.
+Son numerosos los estudios analíticos, numéricos y experimentales que se han realizado
+para determinar si las islas magnéticas aumentan el transporte radial y con ello se reduce el
+tiempo de confinamiento, pero la comunidad científica no ha llegado ningún acuerdo.\par
+Otro fenómeno que provoca elevados niveles de transporte radial de partículas y energía
+y en consecuencia una reducción del tiempo de confinamiento, es la turbulencia. Para llevar a
+cabo estudios que permitan reducir la turbulencia en el plasma, es necesario caracterizarla
+previamente, para ello se emplean distintas magnitudes. Una de las más utilizadas es la longitud
+de correlación radial ($L_r$). Se trata de una medida estadística de la turbulencia cuyo
+valor es proporcional al tamaño de las estructuras turbulentas.
+Son varios los diagnósticos que pueden medir $L_r$: sondas de Langmuir, Beam Emission Spectroscopy,
+Heavy Ion Beam probe, reflectometría, etc.
+\subsection{Plasma}\label{subsec:plasma}
+Un plasma es un gas ionizado, en el que los electrones son separados de los iones. La separación
+de partículas cargadas positiva y negativamente da lugar a campos eléctricos. Los electrones son más
+móviles que los iones en un plasma debido a la pequeña masa del electrón. Por lo tanto, la pequeña separación de la carga
+puede dar lugar a la oscilación electrostática de los electrones alrededor de los iones de fondo.
+La frecuencia de esta oscilación se llama frecuencia de plasma, $\omega_p^2=\left(\frac{n_ee^2}{\varepsilon_0m_e}\right)^{\frac{1}{2}}$ donde $n_e$  es la densidad electrónica del plasma, e es la carga del electrón, $\varepsilon_0$ es la constante dieléctrica del vacío y $m_e$ es la masa del electrón.
+El rápido movimiento de los electrones consigue apantallar el desequilibrio de la carga, dotando de carga neutra a nuestro plasma (en mayor parte). 
+La escala de longitud sobre la cual los electrones apantallan el desequilibrio de la carga es la longitud de Debye, $\lambda_D=\left(\frac{\varepsilon_0k_BT_e}{e^2n_e}\right)^{\frac{1}{2}}$
+donde $T_e$ es la temperatura del electrón.\par
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{img/larmor.png}
+    \caption[Movimiento del electrón y el ion en un campo magnético]{Movimiento del electrón y el ion en un campo magnético~\cite{Miyamoto2011}.}
+    \label{fig:larmor}
+\end{figure}
+Cuando una partícula cargada se mueve con velocidad \textbf{v} a través de un campo eléctrico \textbf{E} y magnético 
+\textbf{B}, la fuerza electromagnética ejercida sobre la partícula cargada es la fuerza de Lorentz. Despreciando 
+la gravedad, la ecuación del movimiento está dada por:
+\begin{equation}\label{eq:lorentz}
+    m\frac{d\textbf{v}}{dt}=q(\textbf{E}+\textbf{v}\times \textbf{B})
+\end{equation}
+\par
+En un campo magnético uniforme, la partícula cargada sigue un movimiento helicoidal alrededor de la
+línea de campo de la figura~\ref{fig:larmor}. Este movimiento puede descomponerse en un movimiento lineal (centros de giro)
+a lo largo de la línea de campo y un movimiento circular, el movimiento de Larmor, perpendicular a la línea de campo.
+Considerando la ecuación de fuerza de Lorentz~\eqref{eq:lorentz}, obtenemos la frecuencia ciclotrón $\omega_c$ y 
+el radio de Larmor $r_L$ del movimiento como:
+\begin{equation}\label{eq:ciclotron}
+    \omega_c=\frac{\lvert q\rvert B}{m}
+\end{equation}
+\begin{equation}\label{eq:radiolarmor}
+    r_L\equiv\frac{v_\perp}{\omega_c}=\frac{mv_\perp}{\lvert q\rvert B}
+\end{equation}
+\par
+En unos campos genéricos \textbf{E} y \textbf{B}, es decir, \textbf{E} y \textbf{B} pueden variar en el espacio y en el 
+tiempo, los centros de giro del movimiento pueden tener deriva a través de los campos magnéticos. Basado en lo que origina 
+la deriva, el posible centro de giro se puede descomponer como: $\textbf{E}\times\textbf{B}$, $\nabla B$, curvatura 
+y deriva por polarización $V_g=V_E+V_{\nabla B}+V_\kappa+V_p$. Todas estas derivas surgen básicamente debidas al 
+cambio o distorsión de las órbitas de Larmor durante el movimiento de giro. Un centro de giro fundamental 
+es $\textbf{E}\times\textbf{B}$: $V_E=\frac{\textbf{E}\times\textbf{B}}{B^2}$. 
+Esta es el fundamento para controlar las inestabilidades a pequeña escala en un plasma.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{img/drift.png}
+    \caption[Deriva causada por un campo toroidal]{Deriva causada por un campo toroidal~\cite{Miyamoto2011}.}
+    \label{fig:drift}
+\end{figure}
+\par
+
