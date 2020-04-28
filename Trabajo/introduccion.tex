@@ -154,4 +154,58 @@ Esta es el fundamento para controlar las inestabilidades a pequeña escala en un
     \label{fig:drift}
 \end{figure}
 \par
+Las derivas de los centros de giro nos acercan a la comprensión del confinamiento del plasma. 
+Debido a la alta movilidad de las partículas cargadas en el campo magnético, siempre hay un 
+rápido end-loss en un dispositivo de lineas de campo abiertas, como en un cilindro recto o en 
+"espejos magnéticos". Para evitar este end loss, la configuración principal para el 
+confinamiento magnético es el toro. En un toro simple, podría ocurrir una deriva vertical de 
+partículas (por ejemplo, debido a la deriva $\nabla B$) y causar la separación de las partículas 
+cargadas. Esta separación da lugar a campos eléctricos. 
+La fuerza producida por $\textbf{E}\times\textbf{B}$ moverá el plasma hacia afuera y degradará su confinamiento. 
+Esta separación de carga puede ser compensada torciendo helicoidalmente las líneas 
+de campo magnético alrededor del toro, es decir, el campo magnético total está formado por 
+la combinación de un componente toroidal $B_\phi$ y un componente poloidal $B_\theta$. El número de 
+tránsitos poloidales por cada tránsito toroidal de un campo en una superficie de flujo toroidal 
+es la transformada rotacional $\imath/2\pi$.
+\begin{equation}\label{eq:transrot}
+    \frac{\imath}{2\pi}=\frac{d\psi}{d\Phi}
+\end{equation}
+donde $\psi$ es el flujo magnético poloidal, y $\Phi$ el flujo magnético toroidal. Más intuitivamente, si
+las líneas de campo se cierran sobre sí mismas después de n tránsitos poloidales y m 
+toroidales del toro, entonces $\imath=n/m$.\newpage
+Hay básicamente tres maneras de retorcer el campo magnético, y por lo tanto crear una transformada rotacional~\cite{Helander_2012}:
+\begin{enumerate}[(1)]
+    \item llevando a deriva la corriente toroidal;
+    \item alargando las superficies de flujo y haciendo que giren poloidalmente alrededorel toro;
+    \item haciendo que el eje magnético no sea plano.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+        \minipage{0.32\textwidth}
+            \includegraphics[width=\linewidth]{img/twist_1.png}
+            \caption{Tokamak}
+        \endminipage\hfill
+        \minipage{0.32\textwidth}
+            \includegraphics[width=\linewidth]{img/twist_2.png}
+            \caption{LHD stellarator}
+        \endminipage\hfill
+        \minipage{0.32\textwidth}
+            \includegraphics[width=\linewidth]{img/twist_3.png}
+            \caption{TJ-II stellarator}
+        \endminipage
+    \caption[Superficies de flujo externo, líneas de campo magnético y eje magnético para tokamak, stellarator LHD, y stellarator TJ-II]{Superficies de flujo externo (azul transparente), líneas de campo magnético (azul claro) y eje magnético
+    (rojo) para tokamak, stellarator LHD, y stellarator TJ-II~\cite{doi:10.1063/1.4921255}.}
+    \label{fig:twist}
+\end{figure}
+\par
+La configuración magnética de los dispositivos de fusión toroidal se distinguen principalmente
+a través de la forma de generar la transformación rotacional. El Tokamak
+usa el método (1). Algunos stellarators, por ejemplo el LHD, utilizan el método (2). Otros stellarators, por 
+ejemplo, TJ-II y W7-X utilizan tanto (2) como (3). Algunos diseños más avanzados, por ejemplo
+NCSX, utiliza los tres métodos. La figura~\ref{fig:twist}muestra las diferentes maneras de generar estas transformaciones.
+La eficiencia del confinamiento del plasma por el campo magnético se mide por
+el parámetro plasma beta, definido como la relación entre la presión del plasma y la presión magnética.
+\begin{equation}\label{eq:beta}
+    \beta=\frac{\langle p\rangle}{B^2/2\mu_0}
+\end{equation}
 
