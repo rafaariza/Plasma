@@ -88,7 +88,7 @@ cuando se cumple el criterio de Lawson~\eqref{eq:lawson}.
 El tiempo de confinamiento de las primeras máquinas era de unos pocos milisegundos, dado
 que el campo magnético confinante únicamente tenía componente toroidal. Se consiguieron
 plasmas con un tiempo de confinamiento treinta veces superior cuando los campos magnéticos
-tenían cierta helicidad. Para definir esta propiedad en stellarators, se utiliza la transformada
+tenían cierta helicidad. Para definir esta propiedad en \textit{stellarators}, se utiliza la transformada
 rotacional que es el número de giros poloidales por cada giro toroidal. Normalmente este
 valor varía a lo largo del radio, por ello se habla de perfil de la transformada rotacional. En
 algunos puntos radiales el valor de la transformada rotacional puede ser racional, dando lugar
@@ -104,8 +104,8 @@ cabo estudios que permitan reducir la turbulencia en el plasma, es necesario car
 previamente, para ello se emplean distintas magnitudes. Una de las más utilizadas es la longitud
 de correlación radial ($L_r$). Se trata de una medida estadística de la turbulencia cuyo
 valor es proporcional al tamaño de las estructuras turbulentas.
-Son varios los diagnósticos que pueden medir $L_r$: sondas de Langmuir, Beam Emission Spectroscopy,
-Heavy Ion Beam probe, reflectometría, etc.
+Son varios los diagnósticos que pueden medir $L_r$: sondas de \textit{Langmuir}, \textit{Beam Emission Spectroscopy},
+\textit{Heavy Ion Beam probe}, reflectometría, etc.
 \subsection{Plasma}\label{subsec:plasma}
 Un plasma es un gas ionizado, en el que los electrones son separados de los iones. La separación
 de partículas cargadas positiva y negativamente da lugar a campos eléctricos. Los electrones son más
@@ -166,13 +166,13 @@ Esta separación de carga puede ser compensada torciendo helicoidalmente las lí
 de campo magnético alrededor del toro, es decir, el campo magnético total está formado por 
 la combinación de un componente toroidal $B_\phi$ y un componente poloidal $B_\theta$. El número de 
 tránsitos poloidales por cada tránsito toroidal de un campo en una superficie de flujo toroidal 
-es la transformada rotacional $\imath/2\pi$.
+es la transformada rotacional $\iota/2\pi$.
 \begin{equation}\label{eq:transrot}
-    \frac{\imath}{2\pi}=\frac{d\psi}{d\Phi}
+    \frac{\iota}{2\pi}=\frac{d\psi}{d\Phi}
 \end{equation}
 donde $\psi$ es el flujo magnético poloidal, y $\Phi$ el flujo magnético toroidal. Más intuitivamente, si
 las líneas de campo se cierran sobre sí mismas después de n tránsitos poloidales y m 
-toroidales del toro, entonces $\imath=n/m$.\newpage
+toroidales del toro, entonces $\iota=n/m$.\newpage
 Hay básicamente tres maneras de retorcer el campo magnético, y por lo tanto crear una transformada rotacional~\cite{Helander_2012}:
 \begin{enumerate}[(1)]
     \item llevando a deriva la corriente toroidal;
@@ -187,20 +187,20 @@ Hay básicamente tres maneras de retorcer el campo magnético, y por lo tanto cr
         \endminipage\hfill
         \minipage{0.32\textwidth}
             \includegraphics[width=\linewidth]{img/twist_2.png}
-            \caption*{LHD stellarator}
+            \caption*{LHD \textit{stellarator}}
         \endminipage\hfill
         \minipage{0.32\textwidth}
             \includegraphics[width=\linewidth]{img/twist_3.png}
-            \caption*{TJ-II stellarator}
+            \caption*{TJ-II \textit{stellarator}}
         \endminipage
-    \caption[Superficies de flujo externo, líneas de campo magnético y eje magnético para tokamak, stellarator LHD, y stellarator TJ-II]{Superficies de flujo externo (azul transparente), líneas de campo magnético (azul claro) y eje magnético
-    (rojo) para tokamak, stellarator LHD, y stellarator TJ-II~\cite{doi:10.1063/1.4921255}.}
+    \caption[Superficies de flujo externo, líneas de campo magnético y eje magnético para \textit{tokamak}, \textit{stellarator} LHD, y \textit{stellarator} TJ-II]{Superficies de flujo externo (azul transparente), líneas de campo magnético (azul claro) y eje magnético
+    (rojo) para \textit{tokamak}, \textit{stellarator} LHD, y \textit{stellarator} TJ-II~\cite{doi:10.1063/1.4921255}.}
     \label{fig:twist}
 \end{figure}
 \par
 La configuración magnética de los dispositivos de fusión toroidal se distinguen principalmente
-a través de la forma de generar la transformación rotacional. El Tokamak
-usa el método (1). Algunos stellarators, por ejemplo el LHD, utilizan el método (2). Otros stellarators, por 
+a través de la forma de generar la transformación rotacional. El \textit{tokamak}
+usa el método (1). Algunos \textit{stellarators}, por ejemplo el LHD, utilizan el método (2). Otros \textit{stellarators}, por 
 ejemplo, TJ-II y W7-X utilizan tanto (2) como (3). Algunos diseños más avanzados, por ejemplo
 NCSX, utiliza los tres métodos. La figura~\ref{fig:twist} muestra las diferentes maneras de generar estas transformaciones.
 La eficiencia del confinamiento del plasma por el campo magnético se mide por
@@ -208,4 +208,3 @@ el parámetro plasma beta, definido como la relación entre la presión del plas
 \begin{equation}\label{eq:beta}
     \beta=\frac{\langle p\rangle}{B^2/2\mu_0}
 \end{equation}
-
