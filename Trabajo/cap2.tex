@@ -6,7 +6,7 @@ no tuvo éxito: el plasma se perdía muy rápidamente es decir, sus tiempos
 de confinamiento eran mucho menores de lo esperado. Como se entendería
 luego, esto se debía principalmente a un conocimiento incompleto sobre el
 comportamiento de las resonancias en las superficies magnéticas. Mientras
-el experimento del \textit{stellarator} de Princeton carecía todavía de un buen confinamiento (solo unos pocos tiempos de Bohm2~\footnote{El tiempo Bohm es $\tau_B=\frac{a^2}{D_B}$, $a$ es el radio menor y el coeficiente de difusión de Bohm es $D_B=\frac{1}{16}\frac{k_BT_e}{eB}$, donde $B$ es el campo magnético, $T_e$ es la temperatura electrónica, $e$ es la carga elemental y $k_B$ es la constante de Boltzmann.}
+el experimento del \textit{stellarator} de Princeton carecía todavía de un buen confinamiento (solo unos pocos tiempos de Bohm2~\footnote{El tiempo Bohm es $\tau_B=\frac{a^2}{D_B}$, $a$ es el radio menor y el coeficiente de difusión de Bohm es $D_B=\frac{1}{16}\frac{k_BT_e}{eB}$, donde $B$ es el campo magnético, $T_e$ es la temperatura electrónica, $e$ es la carga elemental y $k_B$ es la constante de \textit{Boltzmann}.}
 a $T_e\approx100 eV$) los científicos
 rusos presentaban en la conferencia de Novosibirsk IAEA 1968~\cite{Artsimovich1969}, un concepto de confinamiento llamado \textit{tokamak}, con el cual era posible alcanzar
 temperaturas electrónicas alrededor de 1 keV para 30 tiempos Bohm (varios
@@ -92,3 +92,179 @@ no racional las líneas de campo llenan la superficie magnética.
 Existen inestabilidades que pueden producir que estas superficies
 se destruyan localmente, dando origen a las llamadas islas magnéticas, esto son regiones del plasma donde las líneas llenan un volumen en vez de una
 superficie y se hablara de ellas más adelante en este texto.
+\subsection{Clasificación de los \textit{stellarators}}
+Con respecto a la clasificación de los \textit{stellarators}, en la figura~\ref{fig:tree} se muestra la genealogía
+de los distintos tipos de stellarators que han operado, operan o están en construcción. A
+continuación se describen los principales:
+\begin{itemize}
+    \item \textit{Stellarator clásico}. Los stellarators clásicos constan de un grupo de bobinas planas circulares
+    cuyos centros se encuentran en el mismo plano. Estas se encargan de producir
+    el campo magnético toroidal. Un segundo grupo de $2l$ bobinas gira helicoidalmente $n$
+    veces alrededor del plasma. La mitad de dichas bobinas helicoidales tiene la corriente
+    en el sentido opuesto a la otra mitad de las bobinas. En la figura~\ref{fig:tree} se puede observar
+    el stellarator \textit{Weldenstein 7-A} construido en Alemania con cuatro bobinas helicoidales
+    $(l=2)$ que giran alrededor del plasma $n=5$ veces a lo largo de la dirección toroidal.
+    Una de las ventajas de este tipo de \textit{stellarators} es que pueden variar el valor del campo
+    toroidal y poloidal de manera independiente, lo cual permite variaciones en su transformada
+    rotacional.
+    Una de las desventajas de este tipo de stellarators son las fuerzas de interacci´on entre
+    las bobinas toroidales y helicoidales.
+    \item \textit{Torsatrón/Heliotrón}. Su construcción es similar a la de los stellarators clásicos. Se
+    diferencian en que estos carecen de bobinas toroidales y la corriente que circula en
+    las bobinas helicoidales tiene el mismo sentido. Estas generan en promedio un campo
+    vertical que es compensado mediante bobinas circulares horizontales instaladas en la
+    parte superior e inferior de la máquina. En la figura~\ref{fig:tree} se observa el torsatrón ATF
+   $(l=2$ y $n=6)$, el cual ya no se encuentra en operativo. Otra máquina de este tipo
+    que actualmente se encuentra en operación es el LHD $(l=2$ y $n=6)$ la cual cuenta con
+    bobinas superconductoras para estudiar plasmas en estado estacionario.
+    Una de las ventajas de esta configuración frente a los stellarators clásicos es que la
+    ausencia de bobinas toroidales permite un mejor acceso al plasma por parte de los
+    distintos diagnósticos.
+    \item \textit{Heliacs}. Constan de un grupo de bobinas planas circulares que generan el campo
+    magnético toroidal. Los centros de estas no están en el mismo plano sino que describen
+    una trayectoria helicoidal alrededor de un conductor central. Esta disposición de
+    las bobinas, genera una geometría del campo magnético cuya sección poloidal tiene forma
+    de alubia y cuyo eje magnético describe una trayectoria helicoidal alrededor
+    de la bobina central. Máquinas reprentativas de esta configuración son TJ-II $(l=1$ y
+    $n=4)$ y H-1 $(l=1$ y $n=3)$ en Australia.
+    Debido a la flexibilidad que permiten este tipo de máquinas, son buenas candidatas
+    para abordar estudios de estabilidad, equilibrio y transporte.
+    \item \textit{Stellarator modular}. La característica fundamental de este tipo de \textit{stellarators} es que
+    la forma geométrica de sus bobinas no es plana. Uno de los principales inconvenientes
+    que presenta esta configuración es la fuerza de interacción entre las bobinas debido a la
+    corta distancia entre ellas. Estas fuerzas suelen ser lo suficientemente elevadas como
+    para provocar desplazamientos entre ellas. Por este motivo, conviene utilizar sujeciones
+    mecánicas especiales en las bobinas.
+    La principal ventaja de este tipo de máquinas reside en la variedad de configuraciones
+    que puede adoptar. Ejemplos de máquinas con esta configuración son \textit{Weldenstein 7-AS},
+    \textit{Weldenstein 7-X} ambas en Alemania y HSX en EEUU.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{img/tree.png}
+    \caption[Diferentes conceptos de stellarator]{Diferentes conceptos de stellarator.}
+    \label{fig:tree}
+\end{figure}
+\section{El \textit{stellarator} heliac flexible TJ-II}
+Las características fundamentales del TJ-II~\cite{doi:10.13182/FST17-131-139} son:
+\begin{enumerate}[(1)]
+    \item Poseer el potencial suficiente para operar en regímenes de alta beta $(<\beta>\approx2\%)$.
+    \item Tener una elevada flexibilidad magnética. Su transformada rotacional puede variar
+    en un amplio rango.
+    \item La sección poloidal del plasma tiene forma de alubia (configuración heliac).
+\end{enumerate}
+Podemos volver a definir $\beta$ de la ecuación~\eqref{eq:beta} como:
+\begin{equation}\label{eq:beta2}
+    \beta=\frac{(n_eT_E+n_iTi)k_B}{B^2/2\mu_0}
+\end{equation}
+donde $n_e$ y $n_i$ son la densidad electrónica e iónica respectivamente, $T_e$ y $T_i$ son la temperatura
+electrónica e iónica, $k_B$ es la constante de \textit{Boltzmann}, $\mu_0$ es la permeabilidad magnética en el
+vacío y $B$ es el campo magnético.
+En la tabla~\ref{tab:tj2} se resumen los parámetros fundamentales de la máquina. Posee 32 bobinas
+que producen campo toroidal (TF), cuatro bobinas verticales que posicionan horizontalmente
+el plasma (VF), una bobina circular (CC) y una bobina helicoidal $(l=1)$ (HX) que gira
+en la dirección toroidal cuatro veces alrededor de la bobina circular, en cuatro períodos $(n=4)$; las dos bobinas CC y
+HX constituyen el conductor central del dispositivo. La posibilidad de programar de manera
+independiente la corriente que circula por estas dos bobinas es lo que proporciona el adjetivo
+flexible a este dispositivo.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+    \hline
+    PARÁMETRO & VALOR \\ \hline
+    Número de períodos          & $n=4$       \\
+    Número de bobinas TF          & 32       \\
+    Radio mayor (m)          & $R_0=1.5$      \\
+    Radio menor medio (m)          & $\langle a\rangle\leq 0.2$       \\
+    Campo magnetico (T)          & $B\leq 1$       \\
+    Transformada rotacional          & $\iota(0)\approx0.9-2.2$       \\
+    Densidad electrónica (ECRH) $(m^{-3})$          & $n^{ECRH}_{e,max}\approx 1.5\times 10^{19}$       \\
+    Densidad electrónica (NBI) $(m^{-3})$          & $n^{NBI}_{e,max}\approx 8\times 10^{19}$       \\
+    Temperatura electrónica máxima (keV)          & $T_e\approx 2$      \\
+    Temperatura iónica (eV)          & $T_i\approx 150$      \\ \hline
+    \end{tabular}
+    \caption{Parámetros característicos del heliac flexible TJ-II.}
+    \label{tab:tj2}
+\end{table}
+En la figura~\ref{fig:view} se muestra una vista en perspectiva del TJ-II.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=4cm]{img/view.png}
+    \caption[Vista en perspectiva del TJ-II]{Vista en perspectiva del TJ-II. En amarillo el plasma, en azul claro las bobinas toroidales y en azul oscuro, las radiales.}
+    \label{fig:view}
+\end{figure}
+\subsection{Calentamiento del plasma}
+Los plasmas utilizados en investigación de fusi´on nuclear poseen un alto grado de ionización 
+para poder ser confinados magnéticamente. Para alcanzar esto, se ha de aportar energía al
+gas inicial.
+Para aportar energía al plasma, se pueden utilizar distintos mecanismos. En este texto se estudian
+plasmas calentados mediante el sistema \textit{Neutral Beam Injector} (NBI) así como mediante
+el sistema \textit{Electron Cyclotron Resonant Heating} (ECRH). A continuación se describen
+el funcionamiento y las características de ambos.
+\subsubsection*{Calentamiento ECRH}
+Este sistema se basa en
+la aceleración de los electrones del plasma mediante haces de ondas electromagnéticas enfocadas
+con altas densidades de potencia y cuya frecuencia es la de resonancia ciclotrónica de
+los electrones.
+Generalmente, estos sistemas constan de un girotrón donde se generan las ondas electromagnéticas, 
+un camino óptico para transportar el haz de microondas hacia la cámara de
+vacío y un espejo elipsoidal para enfocar el haz hacia el plasma.
+En el camino óptico existen varios polarizadores, colocando estos de forma adecuada, se puede hacer que las ondas se propaguen
+en el plasma de dos formas: el modo ordinario (modo-O) es aquel en el cual el campo
+eléctrico de la onda es paralelo al campo magnético de la máquina o el modo extraordinario
+(modo X), en el cual el campo eléctrico de la onda es perpendicular al campo magnético de
+la máquina. La deposición de energía en el plasma mediante ECRH suele tener una buena localización
+espacial, debido a que la frecuencia de resonancia de los electrones es función del valor de
+campo magnético de la máquina, el cual varía a lo largo del radio. Uno de los usos que se le
+da a esto es mitigar determinado
+tipo de inestabilidades MHD~\cite{van_den_Brand_2012}.
+El sistema de encendido y calentamiento del plasma mediante ECRH en el TJ-II consta de
+dos girotrones operando en modo X a una frecuencia de 53.2 GHz que corresponde al segundo
+armónico~\cite{Fernandez2001}. El calentamiento óptimo desde la zona de bajo campo se produce en el
+primer armónico en modo O y en el segundo armónico en modo X. La elección de un modo
+u otro, depende entre otros aspectos del rango de densidades accesibles. Cada girotrón está diseñado
+para proporcionar 300 kW de potencia de salida de microondas. El sistema posee dos líneas
+que transmiten la potencia de las microondas al plasma mediante espejos, el último espejo
+de cada línea está dentro de la cámara de vacío y permite variar el ángulo de lanzamiento
+del haz de microondas y focalizarlo, consiguiendose una alta eficiencia de absorción y una
+estrecha deposición de la energía.
+Uno de los inconvenientes del calentamiento ECRH es la densidad de corte, es decir, la densidad
+del plasma a partir de la cual las ondas electromagnéticas se reflejan. Una futura máquina
+de fusión tendrá dificultades para ser calentada únicamente mediante este método debido a
+las altas densidades que se requieren en en regiones centrales del plasma.
+\subsubsection*{Calentamiento NBI}
+El sistema de calentamiento NBI se basa en la inyección de un haz de neutros altamente
+energético en el plasma, con ello no solo aumenta la temperatura electrónica e iónica sino que
+también lo hace la densidad de ambas especies. El motivo fundamental de que la inyección
+sea de neutros es para que puedan penetrar en el plasma evitando interaccionar con el campo
+magnético.
+Una vez que el haz ha penetrado en el plasma, los neutros pueden ser ionizados por distintos
+procesos atómicos tales como intercambio de carga, ionización por colisiones iónicas e
+ionización por colisiones electrónicas. Una vez ionizados, estos son confinados por el campo
+magnético de la máquina. Debido a la alta energía de los electrones y de los iones del haz,
+es necesario que el campo magnético de la máquina sea lo suficientemente intenso como para
+confinarlos.
+Los iones provinientes del haz son más energéticos que los electrones debido a su diferencia de
+masa, los primeros comienzan a ser frenados debido a las colisiones Coulombianas con iones
+y electrones del plasma. En esas colisiones tiene lugar la transferencia de energía de los iones
+provinientes del haz a los iones y electrones presentes en el plasma.\par
+En lo que respecta a la posición en la que se han de ionizar los neutros, conviene que el
+proceso tenga lugar en el centro de la columna de plasma, para ello existe un compromiso
+entre la densidad del plasma y la energía del haz. Si el plasma es poco denso o el haz muy
+energético podría no producirse ionización, lo que conduciría a que muchos neutros impactaran
+en la pared con su consecuente deterioro. Si por el contrario el plasma es muy denso
+o el haz poco energético, entonces los neutros se ionizarían justo en el borde del plasma, lo
+que provocaría un pico en la densidad del borde que lleva a una inestabilidad del plasma.
+En lo referente a la forma en la que se inyectan los neutros en la cámara existen fundamentalmente
+tres formas: inyección co-tangencial, en la cual los neutros son inyectados paralelamente
+al campo magnético y a favor de la corriente de la máquina; inyección contra-tangencial, en
+la cual los neutros son inyectados en contra de la corriente de la máquina y por último existe
+la inyección perpendicular a las líneas de campo magnético. Las tres formas que se han mencionado
+producen un incremento de la temperatura electrónica y/o iónica en el plasma, pero
+solo las dos primeras producen una corriente o un momento en el sentido de la inyección~\cite{wesson2004tokamaks}.
+El sistema NBI instalado en TJ-II, es capaz de inyectar una potencia que varía de 1 a 1.5
+MW. Dicho sistema posee dos líneas de calentamiento, una co-tangencial y la otra contratangencial.
+Una desventaja de los sistemas NBI es el tamaño del equipo, sin embargo tienen la ventaja
+de que pueden ser probados independientemente de la máquina. Otra desventaja desde el
+punto de vista de un reactor de fusión, es que el sistema de calentamiento NBI ha de estar
+muy cerca del plasma por lo que sufrirá flujos neutrónicos y contaminación por Tritio.
